@@ -7,6 +7,7 @@
 .. module::  Analyz
     :platform: Unix, Windows
     :synopsis: Traitement granulométrique (filtrage, segmentation, fit)
+
 .. moduleauthor:: Thomas Pegot <thomas.pegot@gmail.com>
 .. date_day:: '2013-11-24'
 
@@ -346,7 +347,7 @@ def SearchMarker(In, image_filtree, marker_param, mask):
                             int(60.0 * 6 / percent_edge) + 1, True)
         minima(imWrk1, blobsMarkers)
         thinD(blobsMarkers, blobsMarkers)
-        #nbStones = label(blobsMarkers, imWrk3)
+        nbStones = label(blobsMarkers, imWrk3)
         bg_array = getArrayFromImage(imWrk3)[
             0: initial_shape[0],
             0: initial_shape[1]]
